@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Avengers Skills</title>
+
+  <style>
+    /* ===== GLOBAL ===== */
+    body {
+      margin: 0;
+      font-family: 'Oxygen', sans-serif;
+      background-color: #0c0c0c;
+      color: #f0f0f0;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    #main-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1.title {
+      text-align: center;
+      color: #e62429;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px #e62429;
+    }
+
+    .cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .skill-card {
+      background-color: #1c1c1c;
+      border: 2px solid #444;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255, 0, 0, 0.3);
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    }
+
+    .skill-card h2 {
+      color: #00bfff;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    .skill-card ul {
+      padding-left: 20px;
+    }
+
+    .skill-card li {
+      margin-bottom: 8px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .skill-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main-container">
+    <h1 class="title">Individual Skills of All Members</h1>
+
+    <div class="cards-wrapper">
+
+      <div class="skill-card" id="ironman">
+        <h2>1. Iron Man (Tony Stark)</h2>
+        <ul>
+          <li>Genius-level intellect (engineering, AI, robotics)</li>
+          <li>Powered armor suit (flight, strength, weapons)</li>
+          <li>Master strategist and leader</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" id="captainamerica">
+        <h2>2. Captain America (Steve Rogers)</h2>
+        <ul>
+          <li>Enhanced strength and agility</li>
+          <li>Martial artist and tactician</li>
+          <li>Shield combat expert</li>
+          <li>Leadership skills</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" id="thor">
+        <h2>3. Thor</h2>
+        <ul>
+          <li>God of Thunder (lightning, weather control)</li>
+          <li>Superhuman strength and longevity</li>
+          <li>Wields Mjölnir and Stormbreaker</li>
+          <li>Skilled warrior</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" id="hulk">
+        <h2>4. Hulk (Bruce Banner)</h2>
+        <ul>
+          <li>Unmatched strength and durability</li>
+          <li>Rage-fueled power</li>
+          <li>Rapid healing</li>
+          <li>Genius-level intellect (as Banner)</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" id="blackwidow">
+        <h2>5. Black Widow (Natasha Romanoff)</h2>
+        <ul>
+          <li>Martial arts and stealth</li>
+          <li>Expert spy and assassin</li>
+          <li>Tech and weapon specialist</li>
+          <li>High agility and reflexes</li>
+        </ul>
+      </div>
+
+      <div class="skill-card" id="hawkeye">
+        <h2>6. Hawkeye (Clint Barton)</h2>
+        <ul>
+          <li>Master archer</li>
+          <li>Combat and stealth expert</li>
+          <li>Trick arrow specialist</li>
+          <li>Team strategist</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

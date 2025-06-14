@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avengers Form</title>
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        body {
+            margin: 0;
+            font-family: 'Oxygen', sans-serif;
+            background-color: #0c0c0c;
+            color: #f0f0f0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #1a1a1a;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+
+        h2, legend {
+            color: #e62429; /* Marvel Red */
+        }
+
+        label {
+            font-weight: bold;
+            color: #00bfff; /* Blue accent */
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #444;
+            border-radius: 6px;
+            background-color: #333;
+            color: #f0f0f0;
+        }
+
+        fieldset {
+            border: 2px solid #e62429;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group {
+            margin-bottom: 10px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        #submit-button {
+            padding: 12px 20px;
+            background-color: #e62429;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #submit-button:hover {
+            background-color: #b31b1b;
+        }
+
+        .form-block {
+            margin-bottom: 30px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            input[type="text"],
+            input[type="date"] {
+                font-size: 1rem;
+            }
+
+            #submit-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="form-container">
+        <form id="name-form" class="form-block">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+        </form>
+
+        <div class="form-block" id="dob-section">
+            <label for="dob">Date of Birth:</label>
+            <input
+                type="date"
+                id="dob"
+                name="D.O.B"
+                value="2000-01-01"
+                min="1960-01-01"
+                max="2030-12-31" />
+        </div>
+
+        <fieldset id="interest-fieldset" class="form-block">
+            <legend>Choose your interests:</legend>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="thor" name="avengers" value="Thor" />
+                <label for="thor">Thor</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="ironman" name="avengers" value="Iron Man" />
+                <label for="ironman">Iron Man</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="captainamerica" name="avengers" value="Captain America" />
+                <label for="captainamerica">Captain America</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="hulk" name="avengers" value="Hulk" />
+                <label for="hulk">Hulk</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="blackwidow" name="avengers" value="Black Widow" />
+                <label for="blackwidow">Black Widow</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="hawkeye" name="avengers" value="Hawkeye" />
+                <label for="hawkeye">Hawkeye</label>
+            </div>
+        </fieldset>
+
+        <div class="form-block" id="skills-section">
+            <h2>Select an Avenger's Power/Skill Set</h2>
+            <form id="skill-form">
+                <label>
+                    <input type="radio" name="avenger_skill" value="ironman">
+                    Iron Man – Genius, Power Suit, Flight, Missiles
+                </label><br><br>
+
+                <label>
+                    <input type="radio" name="avenger_skill" value="captain">
+                    Captain America – Super Strength, Shield Mastery, Leadership
+                </label><br><br>
+
+                <label>
+                    <input type="radio" name="avenger_skill" value="thor">
+                    Thor – Thunder Power, Mjölnir, God Strength, Flight
+                </label><br><br>
+
+                <label>
+                    <input type="radio" name="avenger_skill" value="hulk">
+                    Hulk – Super Strength, Regeneration, Rage Mode, Durability
+                </label><br><br>
+
+                <label>
+                    <input type="radio" name="avenger_skill" value="blackwidow">
+                    Black Widow – Martial Arts, Stealth, Agility, Espionage
+                </label><br><br>
+
+                <label>
+                    <input type="radio" name="avenger_skill" value="doctorstrange">
+                    Doctor Strange – Magic, Time Manipulation, Portals, Shields
+                </label><br><br>
+
+                <input type="submit" value="Submit" id="submit-button">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
